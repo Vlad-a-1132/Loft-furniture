@@ -1,63 +1,57 @@
-# ROOMS - Магазин мебели в стиле лофт
+# Loft Furniture Website
 
-Интернет-магазин дизайнерской мебели в стиле лофт, созданный на основе современного стека веб-разработки.
+A modern e-commerce website for a furniture company specializing in loft-style furniture.
 
-## Технологии
+## Tech Stack
 
-Проект разработан с использованием следующих технологий:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
-- **Next.js** - React-фреймворк с серверным рендерингом и статической генерацией
-- **TypeScript** - типизация для JavaScript
-- **React Query** - управление серверным состоянием
-- **Tailwind CSS** - утилитарный CSS-фреймворк
+## Features
 
-## Особенности
+- Responsive design
+- Product categories
+- Product showcase
+- About section
+- Hero slider
 
-- Адаптивный дизайн для всех устройств
-- Современный UI/UX в стиле лофт
-- Оптимизированная загрузка изображений
-- Интерактивные компоненты для улучшения пользовательского опыта
+## Getting Started
 
-## Установка и запуск
+First, clone the repository:
 
 ```bash
-# Клонирование репозитория
-git clone <url-репозитория>
-cd my-app
+git clone https://github.com/Vlad-a-1132/Loft-furniture.git
+cd Loft-furniture
+```
 
-# Установка зависимостей
+Install dependencies:
+
+```bash
 npm install
+# or
+yarn
+# or
+pnpm install
+```
 
-# Запуск в режиме разработки
+Run the development server:
+
+```bash
 npm run dev
-
-# Сборка для production
-npm run build
-
-# Запуск production-сервера
-npm start
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-## Структура проекта
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-my-app/
-├── public/             # Статические файлы
-│   └── images/         # Изображения
-├── src/                # Исходный код
-│   ├── app/            # Директория Next.js App Router
-│   │   ├── about/      # Страница "О нас"
-│   │   ├── contacts/   # Страница "Контакты"
-│   │   ├── delivery/   # Страница "Доставка"
-│   │   ├── products/   # Страницы товаров
-│   │   ├── globals.css # Глобальные стили
-│   │   ├── layout.tsx  # Корневой макет
-│   │   └── page.tsx    # Главная страница
-│   ├── components/     # Компоненты React
-│   │   ├── common/     # Общие компоненты
-│   │   └── layout/     # Компоненты макета
-```
+## Screenshots
 
-## Лицензия
+Coming soon...
+
+## License
 
 MIT
