@@ -1,154 +1,109 @@
+'use client';
+
 import Link from 'next/link';
 
 // Компонент футера сайта
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 pt-16 pb-8">
-      <div className="max-w-[1920px] mx-auto border-l border-r border-[#403A34] px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* О нас */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">О нас</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-gray-600 hover:text-black">
-                  Кто мы такие?
-                </Link>
-              </li>
-              <li>
-                <Link href="/about#advantages" className="text-gray-600 hover:text-black">
-                  Наши преимущества
-                </Link>
-              </li>
-              <li>
-                <Link href="/about#warranty" className="text-gray-600 hover:text-black">
-                  Гарантия и возврат
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Наши товары */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Наши товары</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/products/sofas" className="text-gray-600 hover:text-black">
-                  Кресла и диваны
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/tables/coffee" className="text-gray-600 hover:text-black">
-                  Журнальные столики
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/tables/dining" className="text-gray-600 hover:text-black">
-                  Обеденные столы
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/other" className="text-gray-600 hover:text-black">
-                  Другая мебель
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/consoles" className="text-gray-600 hover:text-black">
-                  Консоли
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/bases" className="text-gray-600 hover:text-black">
-                  Подстолья
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Контакты */}
-          <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Для любого другого запроса</h3>
-            <p className="text-gray-600 mb-4">Персональный проект или конкретный запрос</p>
-            
-            <form className="space-y-4">
-              <div>
-                <input 
-                  type="text" 
-                  placeholder="Имя *" 
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-black"
-                />
-              </div>
-              <div>
-                <input 
-                  type="tel" 
-                  placeholder="Телефон" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-black"
-                />
-              </div>
-              <div>
-                <input 
-                  type="text" 
-                  placeholder="Адрес" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-black"
-                />
-              </div>
-              <div>
-                <textarea 
-                  placeholder="Сообщение *" 
-                  required
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-black"
-                ></textarea>
-              </div>
-              <button 
-                type="submit"
-                className="px-6 py-2 bg-black text-white hover:bg-opacity-90 transition-all"
-              >
-                Отправить
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <div className="mt-16 pt-8 border-t border-gray-300">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="text-gray-600 text-sm">Уникальная, экологичная мебель ручной работы</p>
-              <div className="mt-2 flex space-x-4">
-                <a href="https://t.me/roomsloft" className="text-gray-600 hover:text-black" target="_blank" rel="noopener noreferrer">
-                  Telegram
-                </a>
-                <a href="https://wa.me/79252119666" className="text-gray-600 hover:text-black" target="_blank" rel="noopener noreferrer">
-                  WhatsApp
-                </a>
-                <a href="https://vk.com/roomsloft" className="text-gray-600 hover:text-black" target="_blank" rel="noopener noreferrer">
-                  VK
-                </a>
-                <a href="tel:+79252119666" className="text-gray-600 hover:text-black">
-                  +7 925 211-96-66
-                </a>
-              </div>
-            </div>
-            
-            <div className="flex space-x-6">
-              <Link href="/about" className="text-gray-600 hover:text-black text-sm">
-                О нас
-              </Link>
-              <Link href="/products" className="text-gray-600 hover:text-black text-sm">
-                Продукты
-              </Link>
-              <Link href="/collection" className="text-gray-600 hover:text-black text-sm">
-                Коллекция
-              </Link>
-              <Link href="/contacts" className="text-gray-600 hover:text-black text-sm">
-                Контакты
-              </Link>
-            </div>
+    <footer className="bg-white w-full border border-[#403A34]">
+      {/* Верхняя часть футера с логотипом и описанием */}
+      <div className="w-full px-4 py-12 border-b border-[#403A34] relative">
+        {/* Точки в углах */}
+        <div className="absolute left-0 top-0 w-2 h-2 bg-[#403A34]"></div>
+        <div className="absolute right-0 top-0 w-2 h-2 bg-[#403A34]"></div>
+        
+        <div className="flex flex-col items-center justify-center">
+          {/* Логотип K */}
+          <div className="mb-6">
+            <svg width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto">
+              <path d="M40 0L35 10H45L40 0Z" fill="#403A34"/>
+              <text x="40" y="25" fontFamily="Arial" fontSize="10" textAnchor="middle" fill="#403A34">oskame</text>
+            </svg>
           </div>
           
-          <div className="mt-8 text-sm text-gray-500 text-center">
-            © {new Date().getFullYear()} ROOMS. Все права защищены.
+          {/* Текстовое описание */}
+          <h3 className="text-[#403A34] text-lg uppercase text-center font-normal mb-10">
+            УНИКАЛЬНАЯ, ЭКОЛОГИЧНАЯ МЕБЕЛЬ РУЧНОЙ РАБОТЫ
+          </h3>
+          
+          {/* Контактная информация */}
+          <div className="text-[#403A34] text-sm text-center uppercase">
+            TELEGRAM, WHATSAPP, VK, +7 925 211-96-66
+          </div>
+        </div>
+      </div>
+      
+      {/* Секция навигации */}
+      <div className="w-full">
+        <div className="grid grid-cols-2 border-b border-[#403A34]">
+          <div className="py-4 text-center border-r border-[#403A34] text-[#403A34]">
+            <Link href="/about" className="block py-3 hover:bg-gray-50 transition-colors uppercase">
+              О НАС
+            </Link>
+          </div>
+          <div className="py-4 text-center text-[#403A34]">
+            <Link href="/products" className="block py-3 hover:bg-gray-50 transition-colors uppercase">
+              ПРОДУКТЫ
+            </Link>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-2 border-b border-[#403A34]">
+          <div className="py-4 text-center border-r border-[#403A34] text-[#403A34]">
+            <Link href="/collection" className="block py-3 hover:bg-gray-50 transition-colors uppercase">
+              КОЛЛЕКЦИЯ
+            </Link>
+          </div>
+          <div className="py-4 text-center text-[#403A34]">
+            <Link href="/contacts" className="block py-3 hover:bg-gray-50 transition-colors uppercase">
+              КОНТАКТЫ
+            </Link>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-3 border-b border-[#403A34]">
+          <div className="py-4 text-center border-r border-[#403A34] text-[#403A34]">
+            <Link href="/faq" className="block py-3 hover:bg-gray-50 transition-colors uppercase">
+              FAQ
+            </Link>
+          </div>
+          <div className="py-4 text-center border-r border-[#403A34] text-[#403A34]">
+            <Link href="/delivery" className="block py-3 hover:bg-gray-50 transition-colors uppercase">
+              ДОСТАВКА & ВОЗВРАТ ТОВАРА
+            </Link>
+          </div>
+          <div className="py-4 text-center text-[#403A34]">
+            <Link href="/gtc" className="block py-3 hover:bg-gray-50 transition-colors uppercase">
+              GTC
+            </Link>
+          </div>
+        </div>
+      </div>
+      
+      {/* Нижняя часть футера с ROOMS */}
+      <div className="py-16 px-4 relative">
+        {/* Точки в углах */}
+        <div className="absolute left-0 bottom-0 w-2 h-2 bg-[#403A34]"></div>
+        <div className="absolute right-0 bottom-0 w-2 h-2 bg-[#403A34]"></div>
+        
+        <div className="max-w-[1400px] mx-auto">
+          {/* Большой текст ROOMS */}
+          <div className="text-[#403A34] text-9xl sm:text-[12rem] md:text-[16rem] font-bold leading-none text-center mb-12">
+            ROOMS
+          </div>
+          
+          {/* Нижняя секция с ссылками */}
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div>
+              <Link href="https://rooms-loft.ru/index.html" className="text-[#403A34] text-xs">
+                https://rooms-loft.ru/index.html
+              </Link>
+            </div>
+            <div className="text-[#403A34] text-xs uppercase text-right mt-4 md:mt-0">
+              <div className="mb-1">MY ACCOUNT</div>
+              <div className="mb-1">LEGALS</div>
+              <div>CREDITS</div>
+            </div>
           </div>
         </div>
       </div>
