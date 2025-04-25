@@ -1,8 +1,21 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './fonts.css';
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0d0d0d;
+  --primary: #000000;
+  --secondary: #4a4a4a;
+  --accent: #d3c5a0;
+  --gray-light: #f5f5f5;
+  --gray-medium: #e0e0e0;
+  --gray-dark: #757575;
+  --error: #ff3b30;
+  --success: #34c759;
+  --oakame-brown: #403A34;
 }
 
 @theme inline {
@@ -14,13 +27,83 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0d0d0d;
+    --foreground: #ffffff;
+    --primary: #ffffff;
+    --secondary: #a0a0a0;
+    --gray-light: #1e1e1e;
+    --gray-medium: #2d2d2d;
+    --gray-dark: #757575;
+  }
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  html,
+  body {
+    @apply m-0 p-0 min-h-screen;
   }
 }
 
 body {
-  background: var(--background);
+  background: var(--color-white, #f2efe8);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'BwGradual', 'Roboto', Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'BwGradual', 'Playfair Display', serif;
+  letter-spacing: -0.025em;
+}
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
+.btn {
+  @apply inline-block px-6 py-2 font-medium transition-all duration-200 cursor-pointer;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-opacity-90;
+}
+
+.btn-outline {
+  @apply border border-primary text-primary hover:bg-primary hover:text-white;
+}
+
+/* Oakame-специфичные стили */
+.font-bwgradual {
+  font-family: 'BwGradual', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* Пользовательские стили для отрицательных отступов */
+.px-neg {
+  padding-left: -0.5rem;
+  padding-right: -0.5rem;
+}
+
+@layer utilities {
+  .header-container {
+    padding-left: -0.5rem;
+    padding-right: -0.5rem;
+  }
+
+  .slider-container {
+    border-width: 1px;
+    border-color: black;
+  }
+
+  .slider-border {
+    /* Удаляем border-width: 1px */
+    /* --tw-border-opacity: 1; */
+    /* border-color: rgb(0 0 0 / var(--tw-border-opacity)); */
+    border-color: black;
+  }
 }

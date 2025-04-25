@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'BwGradual';
+    src: url('/fonts/BwGradual-Bold.825cca.woff2') format('woff2'),
+         url('/fonts/BwGradual-Bold.9996bb.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BwGradual';
+    src: url('/fonts/BwGradual-Regular.5ee62b.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BwGradual';
+    src: url('/fonts/BwGradual-Medium.3e427b.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-white: hsl(32.73deg 37.93% 94.31%);
+} 
