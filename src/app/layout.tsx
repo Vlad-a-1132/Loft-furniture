@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import { Roboto, Playfair_Display } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import './globals.css';
+import type { Metadata } from 'next';
+import { Roboto, Playfair_Display } from 'next/font/google';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -16,8 +16,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "ROOMS - Мебель в стиле лофт",
-  description: "Качественная дизайнерская мебель в стиле лофт ручной работы",
+  title: 'ROOMS - Мебель в стиле лофт',
+  description: 'Уникальная, экологичная мебель ручной работы в стиле лофт',
 };
 
 export default function RootLayout({

@@ -3,6 +3,7 @@ import SafeImage from '@/components/common/SafeImage';
 import HeroSlider from '@/components/home/HeroSlider';
 import AboutSection from '@/components/home/AboutSection';
 import ProductCategories from '@/components/home/ProductCategories';
+import ContactForm from '@/components/home/ContactForm';
 
 // Компонент категории товаров
 function CategoryCard({ title, image, link }: { title: string; image: string; link: string }) {
@@ -363,11 +364,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Новый блок с категориями и анимированными изображениями */}
-      <ProductCategories />
-
       {/* Секция ПЕРЕРАБОТАННОЕ, КАЧЕСТВО, РУЧНАЯ РАБОТА */}
       <AboutSection />
+
+      {/* Новый блок с категориями и анимированными изображениями - переместили вниз */}
+      <ProductCategories />
+
+      {/* Контактная форма */}
+      <ContactForm />
     </div>
   );
 }
